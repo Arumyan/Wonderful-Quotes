@@ -6,13 +6,13 @@
     </div>
 
     <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3">
-      <button class="btn btn-success" @click.prevent="createNew">Add Quote</button>
+      <button class="btn btn-success btn-lg" @click.prevent="createNew">Add Quote</button>
     </div>
   </div>
 </template>
 
 <script>
-import Quote from './Quote.vue';
+
 export default {
   data() {
     return {
@@ -21,14 +21,17 @@ export default {
   },
   methods: {
     createNew() {
-      
+      this.$emit('quoteAdded', this.quote);
+      this.quote = '';
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+  .btn{
+    margin: 15px 0 20px;
+  }
 </style>
 
 

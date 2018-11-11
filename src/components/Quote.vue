@@ -27,7 +27,7 @@ export default {
   }
 
   .quote:hover {
-    background: #ffe2e2;
+    background: #dff0d8;
   }
 </style>
 
